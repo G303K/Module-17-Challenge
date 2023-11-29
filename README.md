@@ -31,11 +31,11 @@ This regular expression also incorporates quantifiers, such as {6} and {3}, spec
 ### Quantifiers
 Within the given pattern `/^#?([a-f0-9]{6}|[a-f0-9]{3})$/`:
 
-The $ (Dollar Sign), denotes that the # (Number Sign) will either match 0 or 1 time.
+* The $ (Dollar Sign), denotes that the # (Number Sign) will either match 0 or 1 time.
 
-{6} specifies that the preceding token [a-f0-9] is anticipated to consist of exactly 6 characters within that set.
+* {6} specifies that the preceding token [a-f0-9] is anticipated to consist of exactly 6 characters within that set.
 
-{3} indicates that the preceding token [a-f0-9] should precisely comprise 3 characters within that set.
+* {3} indicates that the preceding token [a-f0-9] should precisely comprise 3 characters within that set.
 ### OR Operator
 
 ### Character Classes
