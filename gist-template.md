@@ -18,7 +18,15 @@ Hexadecimal codes are comprised of 6 alphanumeric characters and serve as repres
 ## Regex Components
 
 ### Anchors
+In the given regular expression, /^#?([a-f0-9]{6}|[a-f0-9]{3})$/, both the ^ caret and the $ dollar sign serve as anchors within the example string.
 
+* The ^ caret denotes the beginning of the string to which the regex pattern is applied. It ensures that the pattern matches only at the start of the string.
+
+* The # Number Sign immediately following the ^ caret is a literal character. It is mandatory at the beginning of the string; thus, a # Number Sign must be present at the start.
+
+* The $ dollar sign, located at the end of the regex pattern, functions as an anchor as well. It matches only at the end of the string to which the pattern is applied, indicating the conclusion of the string.
+
+This regular expression also incorporates quantifiers, such as {6} and {3}, specifying the quantity of characters that must match the given pattern.
 ### Quantifiers
 
 ### OR Operator
