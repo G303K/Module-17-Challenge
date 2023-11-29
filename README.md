@@ -47,7 +47,7 @@ The regex pattern is:
 
 * In the second alternative, following the | pipe, [a-f0-9] will produce 3 characters.
 ### Character Classes
-Character classes, shown in square brackets, let you define which characters are allowed. In the example [a-f0-9]:
+Character classes, shown in square brackets, let you define which characters are allowed. In the example `[a-f0-9]`:
 
 * The part a-f means it matches single letters: a, b, c, d, e, or f.
 * The part 0-9 means it matches single digits: 0, 1, 2, 3, 4, 5, 6, 7, 8, or 9.
@@ -55,7 +55,9 @@ Character classes, shown in square brackets, let you define which characters are
 These classes may look the same, but the difference in what they match comes from the quantifier, determining how many characters they can represent.
 
 ### Grouping and Capturing
+When you use round brackets `()`, it forms a capture group. Everything enclosed in these brackets is treated as a single unit. 
 
+In the given example `/^#?([a-f0-9]{6}|[a-f0-9]{3})$/`, there is a single capture group containing two sets of characters separated by an [OR Operator](#or-operator).
 
 ### Greedy and Lazy Match
 
