@@ -37,9 +37,22 @@ Within the given pattern `/^#?([a-f0-9]{6}|[a-f0-9]{3})$/`:
 
 * {3} indicates that the preceding token [a-f0-9] should precisely comprise 3 characters within that set.
 ### OR Operator
+The provided regular expression employs the OR operator, represented by the vertical line or pipe (|). Between two character classes, a pipe creates two alternative groups, enabling the search to find and match either group.
 
+The regex pattern is:
+
+`/^#?([a-f0-9]{6}|[a-f0-9]{3})$/`
+
+* In the first alternative, preceding the | pipe, [a-f0-9] will yield 6 characters.
+
+* In the second alternative, following the | pipe, [a-f0-9] will produce 3 characters.
 ### Character Classes
+Character classes, shown in square brackets, let you define which characters are allowed. In the example [a-f0-9]:
 
+* The part a-f means it matches single letters: a, b, c, d, e, or f.
+* The part 0-9 means it matches single digits: 0, 1, 2, 3, 4, 5, 6, 7, 8, or 9.
+
+These classes may look the same, but the difference in what they match comes from the quantifier, determining how many characters they can represent.
 
 ### Grouping and Capturing
 
