@@ -1,7 +1,7 @@
 # Regex Tutorial: Matching Hex Values
 
 ## Summary
-This tutorial meticulously explains the regular expression /^#?([a-f0-9]{6}|[a-f0-9]{3})$/ designed to match Hex Color Codes.
+This tutorial meticulously explains the regular expression `/^#?([a-f0-9]{6}|[a-f0-9]{3})$/` designed to match Hex Color Codes.
 
 Hexadecimal codes are comprised of 6 alphanumeric characters and serve as representations for colors. The regular expression yields a '#' symbol followed by either a 6 or 3-character code, encompassing lowercase letters (a-f) or numbers (0-9).
 
@@ -18,7 +18,8 @@ Hexadecimal codes are comprised of 6 alphanumeric characters and serve as repres
 ## Regex Components
 
 ### Anchors
-In the given regular expression, /^#?([a-f0-9]{6}|[a-f0-9]{3})$/, both the ^ caret and the $ dollar sign serve as anchors within the example string.
+In the given regular expression, `/^#?([a-f0-9]{6}|[a-f0-9]{3})$/`
+, both the caret and the dollar sign serve as anchors, delineating the pattern within the example string.
 
 * The ^ caret denotes the beginning of the string to which the regex pattern is applied. It ensures that the pattern matches only at the start of the string.
 
@@ -28,13 +29,13 @@ In the given regular expression, /^#?([a-f0-9]{6}|[a-f0-9]{3})$/, both the ^ car
 
 This regular expression also incorporates quantifiers, such as {6} and {3}, specifying the quantity of characters that must match the given pattern.
 ### Quantifiers
-In the provided example syntax /^#?([a-f0-9]{6}|[a-f0-9]{3})$/:
+Within the given pattern `/^#?([a-f0-9]{6}|[a-f0-9]{3})$/`:
 
-* The $ (Dollar Sign), which will be discussed further in the Greedy section, indicates that the # (Number Sign) will match 0-1 times.
+The $ (Dollar Sign), denotes that the # (Number Sign) will either match 0 or 1 time.
 
-* {6} denotes that the preceding token [a-f0-9] should have exactly 6 characters matching within that set.
+{6} specifies that the preceding token [a-f0-9] is anticipated to consist of exactly 6 characters within that set.
 
-* {3} indicates that the preceding token [a-f0-9] should have precisely 3 characters matching within that set.
+{3} indicates that the preceding token [a-f0-9] should precisely comprise 3 characters within that set.
 ### OR Operator
 
 ### Character Classes
