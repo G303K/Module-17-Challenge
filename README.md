@@ -21,23 +21,23 @@ Hexadecimal codes are comprised of 6 alphanumeric characters and serve as repres
 In the given regular expression, `/^#?([a-f0-9]{6}|[a-f0-9]{3})$/`
 , both the caret and the dollar sign serve as anchors, delineating the pattern within the example string.
 
-* The ^ caret denotes the beginning of the string to which the regex pattern is applied. It ensures that the pattern matches only at the start of the string.
+* The `^` caret denotes the beginning of the string to which the regex pattern is applied. It ensures that the pattern matches only at the start of the string.
 
-* The # Number Sign immediately following the ^ caret is a literal character. It is mandatory at the beginning of the string; thus, a # Number Sign must be present at the start.
+* The `#` Number Sign immediately following the ^ caret is a literal character. It is mandatory at the beginning of the string; thus, a # Number Sign must be present at the start.
 
-* The $ dollar sign, located at the end of the regex pattern, functions as an anchor as well. It matches only at the end of the string to which the pattern is applied, indicating the conclusion of the string.
+* The `$` dollar sign, located at the end of the regex pattern, functions as an anchor as well. It matches only at the end of the string to which the pattern is applied, indicating the conclusion of the string.
 
 This regular expression also incorporates quantifiers, such as {6} and {3}, specifying the quantity of characters that must match the given pattern.
 ### Quantifiers
 Within the given pattern `/^#?([a-f0-9]{6}|[a-f0-9]{3})$/`:
 
-* The $ (Dollar Sign), denotes that the # (Number Sign) will either match 0 or 1 time.
+* The `$`, denotes that the # (Number Sign) will either match 0 or 1 time.
 
-* {6} specifies that the preceding token [a-f0-9] is anticipated to consist of exactly 6 characters within that set.
+* `{6}` specifies that the preceding token [a-f0-9] is anticipated to consist of exactly 6 characters within that set.
 
-* {3} indicates that the preceding token [a-f0-9] should precisely comprise 3 characters within that set.
+* `{3}` indicates that the preceding token [a-f0-9] should precisely comprise 3 characters within that set.
 ### OR Operator
-The provided regular expression employs the OR operator, represented by the vertical line or pipe (|). Between two character classes, a pipe creates two alternative groups, enabling the search to find and match either group.
+The provided regular expression employs the OR operator, represented by the vertical line or pipe `|`. Between two character classes, a pipe creates two alternative groups, enabling the search to find and match either group.
 
 The regex pattern is:
 
@@ -60,11 +60,16 @@ When you use round brackets `()`, it forms a capture group. Everything enclosed 
 In the given example `/^#?([a-f0-9]{6}|[a-f0-9]{3})$/`, there is a single capture group containing two sets of characters separated by an [OR Operator](#or-operator).
 
 ### Greedy and Lazy Match
+By default a single `?` is considered greedy, making it match as many instances of the pattern as possible. 
 
+A lazy match is denoted by double `??`, would seek as few occurrences of the pattern as possible. 
+
+However, in our example syntax, it is important to note that it is considered greedy, not lazy.
 
 ### Boundaries
 
+The `^` caret denotes the beginning of the string, while the $ dollar sign indicates the end of the string.
 
 ## Author
-Micah, a Michigan State University coding bootcamp student. 
+Micah D. Hanchett, a Michigan State University coding bootcamp student. 
 Check out [my GitHub](https://github.com/G303K) for more of my work.
